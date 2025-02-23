@@ -1,2 +1,2 @@
-# RuboPlus Firması case çalışması
+# RubuPlus Firması case çalışması
 Angular.js kullanılmıştır.
