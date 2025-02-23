@@ -1,0 +1,52 @@
+@import '../../../../../styles/base/func';
+.program{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ overflow: hidden;
+ width: 100%;
+ margin-bottom: size(180);
+ @media #{max-width()} {
+   flex-direction: column;
+   gap: size(30);
+}
+ .questionBox{
+    width: max-content;
+    padding: size(47) size(126);
+    border-radius: size(22);
+    background-color: var(--white);
+    position: relative;
+    bottom:size(-76);
+    @media #{max-width()} {
+        bottom:size(0);
+        padding: size(20) size(0);
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     }
+    h2{
+        font-size: size(48.16);
+        font-weight: 700;
+        line-height: size(59.62);
+        color: var(--dark);
+        @media #{max-width()} {
+            font-size: size(24);
+
+         }
+        span{
+            background: linear-gradient(90deg, #ED417F, #6A5BFF, #08A3DA);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    }
+ }
+ .prgCard{
+    display: flex;
+    @media #{max-width()} {
+        flex-direction: column;
+        gap: size(30);
+     }
+ }
+}

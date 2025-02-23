@@ -1,0 +1,70 @@
+<div  class="header" [ngClass]="{
+  'header': true, 
+  'headerTransparent': transparent && !relativePage, 
+  'headerRelative': relativePage && !transparent
+}">
+  <div class="container">
+    <div class="topbar">
+      <div class="logo">
+        <a href="/">
+          <img src="/images/logo1.svg" alt="logo" />
+        </a>
+      </div>
+      <nav class="d-md">
+        <ul class="navItems">
+            <li
+              *ngFor="let item of menus"
+              [ngClass]="{ active: active === item.url }"
+              (click)="setActive(item.url)"
+            >
+              <a [routerLink]="item.url">{{ item.name }}</a>
+            </li>
+          </ul>
+          
+      </nav>
+      <div class="buttons d-md">
+        <button class="btn grayButton">GİRİŞ</button>
+        <button class="btn pinkButton">BAŞVUR</button>
+      </div>
+      <div
+        (click)="setMenuActive(!menuActive)"
+        [ngClass]="{ 'hamburger': true, 'menuActive': menuActive, 'd-sm': true }"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </div>
+<div
+  class="mobileNav"
+  [ngClass]="{ mobileActive: menuActive, 'd-sm': true }"
+>
+  <div class="logo">
+    <a href="/">
+      <img src="/images/logo1.svg" alt="logo" />
+    </a>
+    <div
+      (click)="setMenuActive(!menuActive)"
+      [ngClass]="{ 'hamburger': true, 'menuActive': menuActive }"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <ul class="navItems">
+    <li
+      *ngFor="let item of menus"
+      [ngClass]="{ active: active === item.url }"
+      (click)="setActive(item.url)"
+    >
+      <a [routerLink]="item.url">{{ item.name }}</a>
+    </li>
+  </ul>
+  <div class="buttons">
+    <button class="btn grayButton">GİRİŞ</button>
+    <button class="btn pinkButton">BAŞVUR</button>
+  </div>
+</div>
+</div>  

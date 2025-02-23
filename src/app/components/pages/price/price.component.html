@@ -1,0 +1,9 @@
+<section class="pricesPage">
+    <div class="pricesContent">
+      <app-hero-prices></app-hero-prices>
+      <div *ngFor="let program of data; let i = index">
+        <app-programs [data]="program"></app-programs>
+      </div>
+    </div>
+  </section>
+  

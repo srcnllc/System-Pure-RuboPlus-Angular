@@ -1,0 +1,38 @@
+<section class="programinfocard">
+    <div class="title">
+      <h2>{{ title }} <span [style.color]="color">{{ subTitle }}</span></h2>
+      <h6>{{ date }}</h6>
+    </div>
+    <div class="desc">
+      <div class="text">
+        <img [src]="messageIcon1" alt="message" />
+        <p>{{ message1 }}</p>
+      </div>
+      <div class="text">
+        <img [src]="messageIcon2" alt="wifi" />
+        <p>{{ message2 }}</p>
+      </div>
+      <div *ngIf="message4" class="text">
+        <img [src]="messageIcon4" alt="education" />
+        <p>{{ message4 }}</p>
+      </div>
+      <div class="text">
+        <img [src]="messageIcon3" alt="bag" />
+        <p>{{ message3 }}</p>
+      </div>
+    </div>
+    <div class="price">
+      <h3 *ngIf="price; else notPrice">
+        {{ price }} <span>{{ installment }}</span>
+      </h3>
+      <ng-template #notPrice>
+        <h3>İşe girince Öde <span [style.color]="color" class="notJob">*</span></h3>
+      </ng-template>
+      <p>{{ amount }}</p>
+      <button class="btn pinkButton" [style.backgroundColor]="color">DETAYLI BİLGİ</button>
+      <div class="description">
+        <p>{{ description }}</p>
+      </div>
+    </div>
+  </section>
+  

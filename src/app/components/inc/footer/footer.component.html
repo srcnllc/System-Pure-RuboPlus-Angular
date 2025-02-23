@@ -1,0 +1,20 @@
+<div class="footer">
+    <div class="container large">
+      <div class="footerContent">
+        <div class="logo">
+          <img src="/images/logo1.svg" alt="logo" />
+        </div>
+  
+        <div class="nav">
+          <ul *ngFor="let section of FooterNav">
+            <li *ngFor="let link of section.links">{{ link }}</li>
+          </ul>
+        </div>
+  
+        <div class="bankCard">
+          <img *ngFor="let card of BankCardList" [src]="card.image" [alt]="card.title" />
+        </div>
+      </div>
+    </div>
+  </div>
+  

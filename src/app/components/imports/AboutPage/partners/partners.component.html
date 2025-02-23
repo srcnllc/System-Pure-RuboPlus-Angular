@@ -1,0 +1,14 @@
+<section class="partners">
+    <div class="content">
+      <div class="desc">
+        <h3>Önde gelen kurumların tercihi Systempure oldu!</h3>
+        <p>Başarılı kurumsal işbirlikleri ile öğrencilerimizi tercih eden kurumlarımızdan bazıları</p>
+      </div>
+      <div class="partnersList">
+        <div *ngFor="let partner of partnerList; let i = index" class="partner" [attr.key]="i">
+          <img [src]="partner.image" [alt]="partner.title" />
+        </div>
+      </div>
+    </div>
+  </section>
+  

@@ -1,0 +1,14 @@
+<section class="heroprices">
+    <h2>Eğitimlerimiz</h2>
+    <div class="content">
+      <div *ngFor="let item of EducationList; let i = index">
+        <app-education-card 
+          [title]="item.title" 
+          [desc]="item.desc" 
+          [buttonColor]="item.buttonColor" 
+          [titleColor]="item.titleColor">
+        </app-education-card>
+      </div>
+    </div>
+  </section>
+  

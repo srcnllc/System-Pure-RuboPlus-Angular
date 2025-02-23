@@ -1,0 +1,38 @@
+<section class="programs">
+    <h2>{{ data.blogName }}</h2>
+    <h5 [style.color]="data.color">{{ data.blogSubTitle }}</h5>
+  
+    <!-- Program info kartlarını *ngFor ile dönüyoruz -->
+    <div class="content">
+      <app-program-info-card
+        *ngFor="let program of data.blogProgramData; let i = index"
+        [color]="data.color"
+        [title]="program.title"
+        [subTitle]="program.subTitle"
+        [date]="program.date"
+        [message1]="program.message1"
+        [message2]="program.message2"
+        [message3]="program.message3"
+        [message4]="program.message4"
+        [price]="program.price"
+        [installment]="program.installment"
+        [amount]="program.amount"
+        [description]="program.description"
+        [messageIcon1]="program.messageIcon1"
+        [messageIcon2]="program.messageIcon2"
+        [messageIcon3]="program.messageIcon3"
+        [messageIcon4]="program.messageIcon4"
+      ></app-program-info-card>
+    </div>
+  
+    <!-- Blog açıklaması -->
+    <div class="notes">
+      <p>{{ data.blogDescription }}</p>
+    </div>
+  
+    <!-- Eğer banner varsa, Banner bileşenini göster -->
+    <div class="banners">
+      <app-banner *ngIf="data.banner" [bannerData]="data.banner"></app-banner>
+    </div>
+  </section>
+  
